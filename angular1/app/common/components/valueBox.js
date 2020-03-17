@@ -1,20 +1,21 @@
-angular.module('caedApp').component('valueBox', {
-  bindings: {
-    grid: '@',
-    colorClass: '@',
-    value: '@',
-    text: '@',
-    iconClass: '@'
-  },
-  controller: [
-    'gridSystem',
-    function(gridSystem) {
-      this.$onInit = function() {
-        this.gridClasses = gridSystem.toCssClasses(this.grid);
-      };
-    }
-  ],
-  template: `
+(function() {
+  angular.module('caedApp').component('valueBox', {
+    bindings: {
+      grid: '@',
+      colorClass: '@',
+      value: '@',
+      text: '@',
+      iconClass: '@'
+    },
+    controller: [
+      'gridSystem',
+      function(gridSystem) {
+        this.$onInit = function() {
+          this.gridClasses = gridSystem.toCssClasses(this.grid);
+        };
+      }
+    ],
+    template: `
   <div class="{{$ctrl.gridClasses}}">
     <div class="small-box {{$ctrl.colorClass}}">
       <div class="inner">
@@ -27,4 +28,5 @@ angular.module('caedApp').component('valueBox', {
     </div>
   </div>
   `
-});
+  });
+})();
