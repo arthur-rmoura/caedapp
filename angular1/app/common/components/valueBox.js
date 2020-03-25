@@ -10,9 +10,7 @@
     controller: [
       'gridSystem',
       function(gridSystem) {
-        this.$onInit = function() {
-          this.gridClasses = gridSystem.toCssClasses(this.grid);
-        };
+        this.$onInit = () => (this.gridClasses = gridSystem.toCssClasses(this.grid));
       }
     ],
     template: `
