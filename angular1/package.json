@@ -8,8 +8,9 @@
     "dev": "gulp",
     "production": "gulp --production"
   },
-  "author": "Arthur Eduardo Moura",
-  "license": "SEE LICENSE IN LICENSE FILE",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "admin-lte": "2.3.11",
     "angular": "1.6.6",
